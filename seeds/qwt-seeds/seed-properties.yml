@@ -1,0 +1,17 @@
+version: 2
+
+seeds:
+  - name: divisions
+    config:
+      schema: seeds
+
+  - name: productcategories
+    config:
+      schema: seeds
+
+  - name: shippers
+    config:
+      schema: seeds
+      +column_types:
+        ShipperID: number
+        CompanyName: varchar(100)
