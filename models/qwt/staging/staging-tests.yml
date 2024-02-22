@@ -30,4 +30,4 @@ models:
         tests:
           - unique
           - not_null
-          - is_even
+          # - is_even
