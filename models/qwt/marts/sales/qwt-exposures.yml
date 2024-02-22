@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+  - name: sales-kpi-qwt-metrics
+
+    type: dashboard
+    maturity: high
+    url: https://www.google.com
+    description: sales kpi tracker for qwt metrics
+
+    depends_on:
+      - ref('fct_orders')
+      - ref('dim_customers')
+      - ref('dim_products')
+
+    owner:
+      name: jhon from analytics
+      email: dhaddfsd@gmail.com
