@@ -1,4 +1,6 @@
-{{ config( materialized = 'table', schema = 'transforming') }}
+-- {{ config( materialized = 'table', schema = 'transforming') }}
+
+{{ config( materialized = 'table', schema =  env_var('DBT_TRFSCHEMA', 'TRANSFORMING')) }}
 
 select 
 get(xmlget(suppliersinfo, 'SupplierId'), '$') as SupplierId,

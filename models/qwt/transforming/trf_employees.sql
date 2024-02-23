@@ -1,6 +1,6 @@
 {{
     config(
-        materialized='table', schema='Transforming'
+        materialized='table', schema = env_var('DBT_TRFSCHEMA', 'TRANSFORMING')
     )
 }}
  
