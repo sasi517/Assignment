@@ -1,4 +1,5 @@
-{{ config(materialized="table",schema = 'TRANSFORMING') }}
+-- {{ config(materialized="table",schema = 'TRANSFORMING') }}
+{{ config(materialized="table",schema = env_var('DBT_TRFSCHEMA', 'TRANSFORMING')) }}
 select 
 CUSTOMERID,
 COMPANYNAME,
